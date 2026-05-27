@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi</title>
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Hindi Emoji Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕉️</text></svg>">
+
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Subject Heading */
+        h1 {
+            text-align: center;
+            font-size: clamp(2.6rem, 5vw, 3.6rem);
+            margin: 20px 0 50px;
+            color: #111827;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #4f46e5, #22c55e);
+            margin: 14px auto 0;
+            border-radius: 10px;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-bottom: 30px;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /* Card Layout */
+        .teacher-container,
+        .unit-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            align-items: flex-start;
+        }
+
+        /* Images */
+        .teacher-photo,
+        .unit-photo {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        /* Text Sections */
+        .teacher-info,
+        .unit-info {
+            flex: 1;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #00BFA5;
+        }
+
+        .unit-info h2,
+        .unit-link h2 {
+            margin-top: 0;
+            color: #9C27B0;
+        }
+
+        /* Unit Link */
+        .unit-link a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #9C27B0;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Home -->
+    <a href="https://vikrant1512-cloud.github.io/Vikrant/" class="home-btn">🏠</a>
+
+    <!-- Subject -->
+    <h1>Hindi</h1>
+
+    <!-- Teacher -->
+    <div class="teacher-container">
+        <img src="hindi_teacher.jpg" alt="Hindi Teacher" class="teacher-photo">
+        <div class="teacher-info">
+            <h3>Hindi Teacher Name</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+
+    <!-- August (Photo) -->
+    <div class="unit-container">
+        <img src="august.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>August</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- September (Photo) -->
+    <div class="unit-container">
+        <img src="september.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>September</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- October (Photo) -->
+    <div class="unit-container">
+        <img src="october.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>October</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- November (Docs) -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>November</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" target="_blank">Open Document</a>
+        </div>
+    </div>
+
+    <!-- December (Photo) -->
+    <div class="unit-container">
+        <img src="december.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>December</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- January (Photo) -->
+    <div class="unit-container">
+        <img src="january.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>January</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- February (Photo) -->
+    <div class="unit-container">
+        <img src="february.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>February</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- March (Docs) -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>March</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" target="_blank">Open Document</a>
+        </div>
+    </div>
+
+    <!-- April (Photo) -->
+    <div class="unit-container">
+        <img src="april.jpg" class="unit-photo">
+        <div class="unit-info">
+            <h2>April</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS (kept minimal, same pattern) -->
+<script>
+    // No dynamic JS required for this page yet
+</script>
+
+</body>
+</html>

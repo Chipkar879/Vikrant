@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English</title>
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- English Emoji Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔠</text></svg>">
+
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Subject Heading */
+        h1 {
+            text-align: center;
+            font-size: clamp(2.6rem, 5vw, 3.6rem);
+            margin: 20px 0 50px;
+            color: #111827;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #4f46e5, #22c55e);
+            margin: 14px auto 0;
+            border-radius: 10px;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-bottom: 30px;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /* Card Layout */
+        .teacher-container,
+        .unit-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            align-items: flex-start;
+        }
+
+        /* Images */
+        .teacher-photo,
+        .unit-photo,
+        .carousel img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        /* Text Sections */
+        .teacher-info,
+        .unit-info {
+            flex: 1;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #00BFA5;
+        }
+
+        .unit-info h2 {
+            margin-top: 0;
+            color: #9C27B0;
+        }
+
+        /* Carousel */
+        .carousel {
+            position: relative;
+            width: 200px;
+        }
+
+        .carousel img {
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 45%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: -12px;
+        }
+
+        .next {
+            right: -12px;
+        }
+
+        /* Unit Link */
+        .unit-link a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #9C27B0;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Home -->
+    <a href="https://vikrant1512-cloud.github.io/Vikrant/" class="home-btn">🏠</a>
+
+    <!-- Subject -->
+    <h1>English</h1>
+
+    <!-- Teacher -->
+    <div class="teacher-container">
+        <img src="english_teacher.png" alt="Teacher Photo" class="teacher-photo">
+        <div class="teacher-info">
+            <h3>Ms. Sayoni Dutta</h3>
+            <p>
+                Ms. Sayoni Dutta is a great teacher who makes learning easy and fun. 
+                She explains things clearly, using simple examples and funny jokes to keep the class entertained. 
+                Her lessons are interesting, and students feel comfortable asking her questions. 
+                Everyone enjoys learning with her because she makes even hard topics easy to understand.
+            </p>
+        </div>
+    </div>
+
+    <!-- August -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>August - Dark Paris</h2>
+            <p>
+                This graphic novel is about a journey through a strange, hidden world where shadows seem alive. 
+                The characters feel lost, searching for something more, and one of them is led to a secret place that could change everything. 
+                It's a mix of mystery, adventure, and deep thoughts about life, with cool visuals and dialogues that make you think.
+            </p>
+            <a href="https://drive.google.com/file/d/1-u2ss_ZtHLeBZNDfPg0HkbRfI18P4YWw/view" target="_blank">
+                Click here to access Dark Paris Novel.
+            </a>
+        </div>
+    </div>
+
+    <!-- September -->
+    <div class="unit-container">
+        <img src="september_work.png" alt="Unit 1" class="unit-photo">
+        <div class="unit-info">
+            <h2>September - Persuasive Essay</h2>
+            <p>
+                In this task, I explored why it’s important to save an old, empty building in our town. 
+                I imagined how much history it holds and how it’s been silently witnessing everything for years. 
+                I thought about how cool it would be if we could turn it into something useful for everyone, 
+                like a local museum, a space for artists to work, or even a place for community events. 
+                <br><br>
+                By thinking about the future of this building, 
+                I learned how giving new life to old spaces can bring people together and create new opportunities for cultural and social activities. 
+                It also made me realize how important it is to balance preserving history while updating spaces to meet modern needs. 
+                The task took me about 45 minutes, and I revised it once after thinking of different ways to use the building. 
+                If I were to do this again, I’d definitely look into how other towns have repurposed similar buildings 
+                and see what benefits they gained in the long run. That would help me get even more creative ideas!
+            </p>
+        </div>
+    </div>
+
+    <!-- October -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>October - Argumentative Essay</h2>
+            <p>
+                In this task, I created an argument for and against the examinations with reference to its effectiveness and fareness in assessing students. 
+                I then wrote the above essay in 20 minutes and the pros and cons of using exams as a measurement tool. 
+                My argument rest based on the fact that exams will always be a means of measuring the achievements of students as it has proved to be a way of assessing student’s knowledge for a long time. 
+                In this essay, I sought to explain how Examination can encourage students, manage time and facilitate the relational evaluation of the performance of the students. 
+                They assist in the accumulation of important skills including; cramming, analytical work, and working under pressure. 
+                Besides this, exams provide teachers and other institutions of learning with clear indication of the extent of mastery in learners.
+                <br><br>
+                But, I equally emphasised the argument against such thinking by considering the fairness of exams. 
+                Exam stress and anxiety leads to poor performance, therefore, exams provide an untrue picture of a student’s abilities, I said. 
+                In addition to this, I stressed that examinations reward memorizers and good performers, which often does not mean the best performer or the most creative student. 
+                Another problem is that it is possible to receive different amounts of tutors or study materials that leads to disparities between preparation and results of the exam. 
+                Accordingly, this essay suggested that student assessments should be done in a healthier and fairer manner. 
+                As necessary as tests are in school, they should not be the only means of testing student’s knowledge. 
+                For this reason, I suggested the approach that would allow using other forms of assessment such as projects, presentations, and class participation as an additional check on the student’s accomplishment. 
+                Thus, it will be possible to increase objectivity of the assessment and pay more attention to the students’ individual properties.
+            </p>
+            <a href="https://drive.google.com/file/d/1a1jQBrqEz2uZ0mS0wz5D8MCtVCFU4dgj/view" target="_blank">
+                Click here to access Argumentative Essay.
+            </a>
+        </div>
+    </div>
+
+    <!-- November -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>November - Writing a Politician Speech</h2>
+            <p>
+                It took me two hours to write this speech and I have had two revised copies. 
+                First, I planned the major things, such as definition of GDP, issues, and prospects. 
+                Finally, I extended it to include basic and inspirational phrases, constantly saying one more thing, “we are moving forward,” as in a political address. 
+                The objective was to write simple speech like a politician, but at the same time also to inspire every reader. 
+                I also raised issues such as inflation and development in the rural area to express real issues and how it has designing. 
+                I completed the speech individually, but I found facts regarding GDP and some issues India is currently experiencing, making the speech more realistic and assured.  
+                <br><br>
+                I also got the idea that the speeches should inspire people and desire them to take up the challenges with the help of others. 
+                Writing this way I was able to learn on how politicians use words in a try to touch people’s hearts and maintain their optimism. 
+                I figured out that I can always break down ideas and concepts into easy way. 
+                Next time, I will try to bring even more emotional element into the work, or I will try to provide some examples to make the speech even better. 
+                I learned to concentrate on solutions and not to stress on the problem, and I guess this also made me more positive.<br><br>
+
+               (This is the speech because I was unable to upload speech audio. In docs I have kept both 1st and 2nd Draft.)
+            </p>
+            <a href="https://docs.google.com/document/d/1WbmRknOWQSAkwVddTwMxtTeKAJngNph_i-bbRfob4J0/edit?usp=sharing" target="_blank">
+                Click here to access GDP Speech.
+            </a>
+        </div>
+    </div>
+
+    <!-- December -->
+    <div class="unit-container">
+        <img src="december_work.jpg" alt="Unit 1" class="unit-photo">
+        <div class="unit-info">
+            <h2>December - Punctuation Marks</h2>
+            <p>
+                I came across this infographic on punctuation marks while studying for my exam, and it was very helpful. 
+                It explained the use of punctuation marks like full stops, commas, question marks, and more in a simple and clear way. 
+                I spent about 15 minutes going through it to understand each symbol and how to use it. 
+                Since I didn’t make this infographic, I didn’t create any drafts or follow many steps. 
+                I just read it and applied what I learned in my answers. It made me realize how important punctuation is in writing. 
+                Next time I’d try to make my own version to understand it even better.
+            </p>
+        </div>
+    </div>
+
+    <!-- January -->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>January - Reading Book</h2>
+            <p>
+                In the month of January we are reading books in library for a growth in vocabulary and sentence structure. 
+                Also except reading book in the library, I am also reading an Ebook at home named "The Adventures of Tom Sawyer" by Mark Twain. 
+                It is a fun and exciting story about a boy named Tom Sawyer who is always getting into trouble. 
+                Tom is a clever and mischievous boy who doesn’t like boring things like school. 
+                Instead, he spends his time having fun adventures.
+                <br><br>
+                In the story, Tom skips school, tricks his friends into doing his work, and goes treasure hunting with his best friend, Huck Finn. 
+                Along the way, he discovers a mysterious crime and has to figure out what to do about it. 
+                The book is full of funny moments, daring adventures, and clever plans that make Tom a character you can’t forget.
+                <br><br>
+                It’s a great book for anyone who enjoys stories about fun, friendship, and thrilling adventures. 
+                You can even read it for free online.
+            </p>
+            <a href="https://docs.google.com/document/d/1Ocs4BWw2lELCNT-BgylV-HbZV1EhJf4EWllvt44_oaw/edit?usp=sharing" target="_blank">
+                Click here to access the reading book.
+            </a>
+        </div>
+    </div>
+
+    <!--February-->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>February - Poem Writing</h2>
+            <p>
+                In February, I wrote a poem about the most memorable day of my life. It was a special experience because I got to express my emotions and thoughts through poetry. 
+                I completed it in 10 minutes without making drafts. First, I thought about my most unforgettable day and why it was important to me. 
+                Then, I chose descriptive words and rhymes to make the poem meaningful. I focused on expressing my feelings clearly and making the lines flow smoothly.
+                <br><br>
+                This activity helped me improve my creativity and writing skills. I worked alone but later shared my poem with classmates, who gave me positive feedback. 
+                I researched different poetic styles to make my writing better. This experience made me realize that I enjoy writing poems and expressing my thoughts in creative ways. 
+                It also made me more confident in my writing. Next time, I will try using new poetic techniques and work on making my poem even more emotional and engaging.
+            </p>
+            <a href="https://docs.google.com/document/d/1IipwnbHOmWDXJAxgD0AQ0qzkZMSIPVNfs-K5dJb-pY0/edit?usp=sharing" target="_blank">
+                Click here to access the poem.
+            </a>
+        </div>
+    </div>
+
+    <!--March-->
+    <div class="unit-container">
+        <div class="unit-link">
+            <h2>March - Story Writing</h2>
+            <p>
+                I took about an hour to complete this story, including planning, drafting, and finalizing it. 
+                I made around three drafts before I was satisfied with the final version. 
+                First, I brainstormed the storyline and ideas, then wrote the initial draft, keeping it simple and easy to understand. 
+                After that, I revised it to make the language more engaging. Finally, I polished the draft by checking grammar and making sure the story flowed smoothly.
+                <br><br>
+                I worked on this story independently, but I did take some inspiration from fantasy stories and movies. 
+                I didn't do much research, but I focused on understanding how to build suspense and make the fight scene exciting. 
+                Through this process, I learned how to balance simplicity with excitement in storytelling. 
+                I realized that I could write creatively if I planned well and stayed focused. 
+                This experience helped me grow as a writer by teaching me how to make a story more captivating. 
+                Next time, I would focus more on adding descriptive language and making the characters feel more real.
+            </p>
+            <a href="https://docs.google.com/document/d/1eoaPfRySjN3ieBwDmc-cU9ZaMpbwTkei-9N3SPNVfpA/edit?usp=sharing" target="_blank">
+                Click here to access the story.
+            </a>
+        </div>
+    </div>
+
+    <!-- April -->
+    <div class="unit-container">
+        <img src="april_work.png" alt="Unit 1" class="unit-photo">
+        <div class="unit-info">
+            <h2>April - Emotive Language Poster</h2>
+            <p>
+                Creating the “Read A Book, Change the World” poster took me about 1-2 hours. 
+                I made 2–3 drafts before finalizing the one you see. 
+                At first, I explored ideas like a glowing book, children reading, and hands holding books. 
+                I finally chose a powerful background of a library and added a hand-drawn sketch of hands reading a book to make it meaningful and eye-catching.
+                <br><br>
+                The steps I followed were:
+                <ol>
+                <li>Brainstorming and sketching ideas</li>
+                <li>Choosing the best quote</li>
+                <li>Selecting the background</li>
+                <li>Adding design elements (like the book and hands)</li>
+                <li>Final editing and reviewing</li>
+                </ol>
+                
+                I worked alone but took some feedback from my friends, which helped improve the layout and colors. 
+                I researched motivational posters and famous quotes to understand what connects with people. 
+                I learned that I enjoy mixing art and messages that inspire.
+                <br><br>
+                This project helped me grow more patient and thoughtful. 
+                Next time, I might add some animation or interactive elements for a digital version. 
+                Overall, I became more confident and creative through this process.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+</script>
+
+</body>
+</html>
