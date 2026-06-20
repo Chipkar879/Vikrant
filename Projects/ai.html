@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Matrix & Projects</title>
+    
+    <link rel="icon" type="image/jpeg" href="../my_photo_1.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding: 100px 20px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Fixed Top-Left Home Button */
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid #00d2ff;
+            color: #00d2ff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .home-btn:hover {
+            background: #00d2ff;
+            color: #030712;
+            box-shadow: 0 0 15px #00d2ff;
+            transform: translateY(-2px);
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 700px;
+        }
+
+        .header-section h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(to right, #00d2ff, #00ffaa, #a855f7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            color: #94a3b8;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        /* Project Grid Setup */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1050px;
+            width: 100%;
+        }
+
+        /* Creative Project Terminal Cards */
+        .project-card {
+            background: linear-gradient(145deg, #0f172a, #131235);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #00d2ff;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: rgba(0, 255, 170, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 255, 170, 0.1);
+        }
+
+        .project-card:hover::before {
+            background: #00ffaa;
+            width: 6px;
+        }
+
+        .card-number {
+            font-family: monospace;
+            font-size: 12px;
+            color: rgba(0, 210, 255, 0.4);
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        .project-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .project-desc {
+            color: #9cd1f5;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+
+        .action-link {
+            color: #00ffaa;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .action-link:hover {
+            color: #00d2ff;
+            text-shadow: 0 0 8px #00d2ff;
+        }
+
+        .action-link span {
+            margin-left: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover .action-link span {
+            transform: translateX(4px);
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<a href="../index.html" class="home-btn">🏠 Home</a>
+
+<div class="header-section">
+    <h1>PROJECT MATRIX</h1>
+    <p>A specialized catalog of local implementations, software architectures, and custom script arrays deployment configurations.</p>
+</div>
+
+<div class="project-grid">
+
+    <div class="project-card">
+        <div>
+            <span class="card-number">SYS_MOD_01</span>
+            <h2 class="project-title">Jarvis Mark-XXXIX</h2>
+            <p class="project-desc">An advanced multi-engine desktop virtual assistant pulling processing pipelines directly from Google Gemini and OpenRouter protocols for terminal system execution.</p>
+        </div>
+        <div>
+            <div class="tech-stack">
+                <span class="tech-tag">Python 3.14</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">PyAudioWPatch</span>
+            </div>
+            <a href="jarvis.html" class="action-link">Initialize Log <span>&rarr;</span></a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <span class="card-number">SYS_MOD_02</span>
+            <h2 class="project-title">Lorem Ipsum</h2>
+            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div>
+            <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Grid</span>
+                <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="#" class="action-link">Open Cluster <span>&rarr;</span></a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <span class="card-number">SYS_MOD_03</span>
+            <h2 class="project-title">Lorem Ipsum</h2>
+            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div>
+            <div class="tech-stack">
+                <span class="tech-tag">Pending</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Localhost</span>
+            </div>
+            <a href="#" class="action-link">System Locked <span>&rarr;</span></a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Operational Terminal Framework // Active Configuration
+</div>
+
+</body>
+</html>

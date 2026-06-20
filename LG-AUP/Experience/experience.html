@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG-AUP // Experiences</title>
+    
+    <link rel="icon" type="image/png" href="../../my_photo_1.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding: 100px 40px 40px 40px;
+            overflow-x: hidden;
+            transition: all 0.5s ease;
+        }
+
+        /* Top Left Home Link */
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #4A90E2;
+            color: #4A90E2;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
+            transition: all 0.3s ease;
+        }
+        .home-btn:hover {
+            background: #4A90E2;
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Top Right Toggle Button */
+        .toggle-gallery-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #00BFA5;
+            color: #00BFA5;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 191, 165, 0.1);
+            transition: all 0.3s ease;
+        }
+        .toggle-gallery-btn:hover {
+            background: #00BFA5;
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 191, 165, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Layout Container */
+        .main-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Text Workspace Wrapper */
+        .text-content {
+            opacity: 1;
+            transition: all 0.5s ease;
+        }
+        .text-content h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #4A90E2;
+            margin-bottom: 20px;
+        }
+        .text-content p {
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Aesthetic Staggered Grid Container */
+        .media-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+            gap: 15px;
+            width: 100%;
+        }
+
+        /* Media Card Styling */
+        .media-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .media-item:hover {
+            transform: translateY(-10px);
+            border-color: #4A90E2;
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+        }
+
+        /* Grid Variation Stagger Links */
+        .media-container .media-item:nth-child(3n) { grid-row: span 2; }
+        .media-container .media-item:nth-child(5n) { grid-column: span 2; }
+        .media-container .media-item:nth-child(7n) { grid-row: span 2; grid-column: span 2; }
+
+        /* ACTIVE GALLERY MAXIMIZED STATES */
+        body.gallery-mode .text-content {
+            display: none;
+        }
+        body.gallery-mode .main-layout {
+            grid-template-columns: 1fr;
+        }
+        body.gallery-mode .media-container {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-auto-rows: 260px;
+            gap: 25px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 100px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<a href="../../index.html" class="home-btn">🏠 Home</a>
+<button class="toggle-gallery-btn" id="galleryToggle">Maximize Gallery</button>
+
+<div class="main-layout">
+    
+    <div class="text-content" id="textContent">
+        <h1>EXPERIENCE PROTOCOLS</h1>
+        <p>This light-themed workspace presents a randomized, beautifully staggered layout of your development assets without interfering with structural reading panes.</p>
+        <p>To safely unlock full-screen mode and clear out text boundaries, activate the secure dashboard switch pinned to the top right corner.</p>
+    </div>
+
+    <div class="media-container" id="mediaContainer"></div>
+</div>
+
+<script>
+    const mediaContainer = document.getElementById('mediaContainer');
+    const toggleBtn = document.getElementById('galleryToggle');
+    const body = document.body;
+
+    // 1. Configured Repository Details
+    const username = "Chipkar879"; 
+    const repo = "Vikrant";           
+    const folderPath = "LG-AUP/Experience"; 
+
+    // 2. Hybrid Scanner System
+    async function initHybridGallery() {
+        // Detect if running locally (file://) or online (http:// or https://)
+        const isLocal = window.location.protocol === 'file:';
+
+        if (isLocal) {
+            // Local fallback message with quick manual instruction
+            mediaContainer.innerHTML = `
+                <div style="grid-column: 1/-1; background: #f1f5f9; border: 2px dashed #cbd5e1; padding: 30px; border-radius: 16px; text-align: center; color: #64748b;">
+                    <p style="font-weight: 600; margin-bottom: 8px; color: #4A90E2;">Local Preview Mode Active</p>
+                    <p style="font-size: 14px; margin-bottom: 15px;">Browsers block automated folder reading on local hard drives. Push this file to GitHub to see your original names load completely automatically!</p>
+                    <p style="font-size: 13px; font-style: italic;">Tip: To test images locally right now without waiting, name them <strong>1.jpg</strong>, <strong>2.png</strong>, or <strong>3.jpg</strong> in this folder.</p>
+                </div>
+            `;
+            
+            // Try loading numbered placeholders locally so you can still test it out!
+            const maxFilesToTry = 20;
+            const extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+            for (let i = 1; i <= maxFilesToTry; i++) {
+                extensions.forEach(ext => {
+                    const img = document.createElement('img');
+                    img.className = 'media-item';
+                    img.src = `${i}.${ext}`;
+                    img.onload = function() {
+                        // Remove the banner if a local numbered image is successfully found
+                        const banner = mediaContainer.querySelector('div');
+                        if (banner) banner.remove();
+                        mediaContainer.appendChild(img);
+                    };
+                });
+            }
+        } else {
+            // Online Production Mode: Scans folder contents automatically via GitHub API
+            const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folderPath}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`API status ${response.status}`);
+                const files = await response.json();
+                
+                if (Array.isArray(files)) {
+                    mediaContainer.innerHTML = '';
+                    files.forEach(file => {
+                        const fileName = file.name.toLowerCase();
+                        if (fileName === 'experience.html') return;
+                        
+                        if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png') || fileName.endsWith('.webp') || fileName.endsWith('.gif')) {
+                            const img = document.createElement('img');
+                            img.className = 'media-item';
+                            img.src = file.download_url;
+                            img.alt = file.name;
+                            mediaContainer.appendChild(img);
+                        } else if (fileName.endsWith('.mp4') || fileName.endsWith('.webm') || fileName.endsWith('.mov')) {
+                            const video = document.createElement('video');
+                            video.className = 'media-item';
+                            video.src = file.download_url;
+                            video.autoplay = true;
+                            video.loop = true;
+                            video.muted = true;
+                            mediaContainer.appendChild(video);
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error("GitHub API loading failed:", error);
+                mediaContainer.innerHTML = `<p style="color: #ef4444; grid-column: 1/-1;">⚠️ API Loading Error. Check repo settings.</p>`;
+            }
+        }
+    }
+
+    // Launch the scanner setup
+    initHybridGallery();
+
+    // 3. Password Protected Gate System
+    toggleBtn.addEventListener('click', () => {
+        if (!body.classList.contains('gallery-mode')) {
+            const passwordEntry = prompt("Security clearance required. Enter system password:");
+            
+            if (passwordEntry === "Ashoka ka Hungama") {
+                body.classList.add('gallery-mode');
+                toggleBtn.textContent = "Restore Workspace";
+            } else {
+                alert("Access Denied: Invalid system token.");
+            }
+        } else {
+            body.classList.remove('gallery-mode');
+            toggleBtn.textContent = "Maximize Gallery";
+        }
+    });
+</script>
+
+</body>
+</html>
